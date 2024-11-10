@@ -6,8 +6,6 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/enterprise/*" element={<LandingsRoutes />} />
-
-      <Route />
       <Route path="/*" element={<Main />} />
     </Routes>
   );
