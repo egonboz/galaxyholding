@@ -18,7 +18,7 @@ const pages = [
   { name: "Contact", id: "contact" },
 ];
 
-export const LandingAppBar = () => {
+export const LandingAppBar = ({ data }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -32,14 +32,13 @@ export const LandingAppBar = () => {
     <AppBar
       position="fixed"
       sx={{
-        background:
-          "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))", // Gradiente espacial
-        backdropFilter: "blur(10px)", // Efecto de desenfoque para la sensación de espacio
+        background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
+        backdropFilter: "blur(10px)",
         borderRadius: 10,
         margin: 2,
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)", // Sombra para dar profundidad
+        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
         maxWidth: "95%",
-        zIndex: 10, // Asegurarse de que esté por encima de otros elementos
+        zIndex: 10,
       }}
     >
       <Container maxWidth="xl">

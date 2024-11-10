@@ -6,23 +6,23 @@ import { AboutUs } from "./components/AboutUs";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
-export const Landing = () => {
+export const Landing = ({ data }) => {
   return (
     <Box>
-      <LandingAppBar />
+      <LandingAppBar data={data} />
       <Box id="welcome">
-        <Welcome />
+        <Welcome data={data} />
       </Box>
       <Box id="features">
-        <Features />
+        <Features data={data} />
       </Box>
       <Box id="about-us">
-        <AboutUs />
+        <AboutUs data={data} />
       </Box>
       <Box id="contact">
-        <Contact />
+        <Contact data={data} />
       </Box>
-      <Footer />
+      <Footer data={data} />
     </Box>
   );
 };

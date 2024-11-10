@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
-export const Welcome = () => {
+export const Welcome = ({ data }) => {
   return (
     <Box
       sx={{
@@ -8,7 +8,7 @@ export const Welcome = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')`, // Cambia esta URL a la imagen de fondo que desees
+        backgroundImage: `url(${data.Welcome.backgroundImageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#fff",
@@ -17,11 +17,10 @@ export const Welcome = () => {
     >
       <Container maxWidth="sm">
         <Typography variant="h2" sx={{ fontWeight: "bold", mb: 2 }}>
-          Enterprise
+          {data.Welcome.enterpriseName}
         </Typography>
         <Typography variant="body1" sx={{ mb: 4 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed
-          dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.
+          {data.Welcome.description}
         </Typography>
         <Button
           variant="contained"
@@ -31,8 +30,7 @@ export const Welcome = () => {
             alignSelf: { xs: "center", md: "start" },
             px: 5,
             mt: 2,
-            background:
-              "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+            background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
             backdropFilter: "blur(10px)",
             borderRadius: 10,
             margin: 2,

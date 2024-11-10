@@ -1,0 +1,52 @@
+{
+    "Logo":{
+        "imageUrl": "https://via.placeholder.com/500x300"
+    },
+    "Color": {
+    "backgroundColor": "rgba(33, 150, 243, 0.7)"
+    },
+    "Welcome": {
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "enterpriseName": "Enterprise",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "buttonText": "LEARN MORE"
+    },
+    "Features": [
+        {
+          "icon": "ChatIcon",
+          "title": "Lorem ipsum",
+          "description": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+        },
+        {
+          "icon": "CampaignIcon",
+          "title": "Lorem ipsum",
+          "description": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+        },
+        {
+          "icon": "GroupIcon",
+          "title": "Lorem ipsum",
+          "description": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+        },
+        {
+          "icon": "AutoFixHighIcon",
+          "title": "Lorem ipsum",
+          "description": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+        }
+      ],
+      "AboutUs": {
+        "imageUrl": "https://via.placeholder.com/500x300",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "Contact": {
+        "address": "4321 California St, San Francisco, CA 12345",
+        "phone": "+1 123 454 1234",
+        "email": "info@company.com"
+      },
+      "Footer": {
+        "enterprise": "Enterprise",
+        "linkedin": "https://www.linkedin.com",
+        "x": "https://www.x.com",
+        "facebook": "https://www.facebook.com"
+      }
+      
+}

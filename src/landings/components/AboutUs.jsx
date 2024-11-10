@@ -1,15 +1,15 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 
-export const AboutUs = () => {
+export const AboutUs = ({ data }) => {
+  console.log(data);
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems="center">
-          {/* Imagen en blanco y negro */}
           <Grid item xs={12} md={6}>
             <Box
               component="img"
-              src="https://via.placeholder.com/500x300" // Cambia esta URL por la imagen que prefieras
+              src={data.AboutUs.imageUrl}
               alt="About us"
               sx={{
                 width: "100%",
@@ -23,7 +23,6 @@ export const AboutUs = () => {
               }}
             />
           </Grid>
-          {/* Texto de la sección "About Us" */}
           <Grid
             item
             xs={12}
@@ -34,7 +33,7 @@ export const AboutUs = () => {
               variant="h4"
               sx={{
                 fontWeight: "bold",
-                textAlign: "center", // Centrado en móvil
+                textAlign: "center",
               }}
               gutterBottom
             >
@@ -44,10 +43,9 @@ export const AboutUs = () => {
               sx={{
                 width: "60px",
                 height: "4px",
-                background:
-                  "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+                background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
                 backdropFilter: "blur(10px)",
-                margin: "0 auto", // Esto asegura que el Box esté centrado
+                margin: "0 auto",
                 mb: 3,
               }}
             ></Box>
@@ -57,12 +55,7 @@ export const AboutUs = () => {
               paragraph
               sx={{ textAlign: { xs: "center", md: "left" } }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              {data.AboutUs.text}
             </Typography>
           </Grid>
         </Grid>

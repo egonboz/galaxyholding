@@ -4,34 +4,15 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 import GroupIcon from "@mui/icons-material/Group";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 
-const features = [
-  {
-    icon: <ChatIcon fontSize="large" />,
-    title: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
-  },
-  {
-    icon: <CampaignIcon fontSize="large" />,
-    title: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
-  },
-  {
-    icon: <GroupIcon fontSize="large" />,
-    title: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
-  },
-  {
-    icon: <AutoFixHighIcon fontSize="large" />,
-    title: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.",
-  },
-];
+// Mapa de iconos de nombres a componentes JSX
+const iconMap = {
+  ChatIcon: <ChatIcon fontSize="large" />,
+  CampaignIcon: <CampaignIcon fontSize="large" />,
+  GroupIcon: <GroupIcon fontSize="large" />,
+  AutoFixHighIcon: <AutoFixHighIcon fontSize="large" />,
+};
 
-export const Features = () => {
+export const Features = ({ data }) => {
   return (
     <Box sx={{ py: 8, backgroundColor: "#f9f9f9" }}>
       <Container maxWidth="lg">
@@ -47,8 +28,7 @@ export const Features = () => {
           sx={{
             width: "60px",
             height: "4px",
-            background:
-              "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+            background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
             backdropFilter: "blur(10px)",
             margin: "0 auto",
             mb: 6,
@@ -56,7 +36,7 @@ export const Features = () => {
         ></Box>
 
         <Grid container spacing={4} justifyContent="center">
-          {features.map((feature, index) => (
+          {data.Features.map((feature, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Paper
                 elevation={3}
@@ -75,8 +55,7 @@ export const Features = () => {
                     width: "80px",
                     height: "80px",
                     margin: "0 auto",
-                    background:
-                      "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+                    background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
                     backdropFilter: "blur(10px)",
                     color: "#fff",
                     display: "flex",
@@ -87,7 +66,7 @@ export const Features = () => {
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
                   }}
                 >
-                  {feature.icon}
+                  {iconMap[feature.icon]}
                 </Box>
                 <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                   {feature.title}

@@ -2,12 +2,15 @@
   "name": "galaxy-holding",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://egonboz.github.io/galaxyholding/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -16,6 +19,7 @@
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",

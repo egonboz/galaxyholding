@@ -10,7 +10,7 @@ import {
   CardContent,
 } from "@mui/material";
 
-export const Contact = () => {
+export const Contact = ({ data }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,7 +26,6 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de datos (e.g., a través de una API o en el console.log)
     console.log(formData);
   };
 
@@ -45,8 +44,7 @@ export const Contact = () => {
           sx={{
             width: "60px",
             height: "4px",
-            background:
-              "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+            background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
             backdropFilter: "blur(10px)",
             margin: "0 auto",
             mb: 6,
@@ -122,8 +120,7 @@ export const Contact = () => {
                       alignSelf: { xs: "center", md: "start" },
                       px: 5,
                       mt: 2,
-                      background:
-                        "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))",
+                      background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
                       backdropFilter: "blur(10px)",
                       borderRadius: 10,
                       margin: 2,
@@ -135,7 +132,6 @@ export const Contact = () => {
                 </Box>
               </Grid>
 
-              {/* Información de contacto */}
               <Grid
                 item
                 xs={12}
@@ -148,17 +144,24 @@ export const Contact = () => {
                 <Typography variant="body1" color="textSecondary" gutterBottom>
                   <strong>Address</strong>
                   <br />
-                  4321 California St, San Francisco, CA 12345
+                  {data.Contact.address}
                 </Typography>
                 <Typography variant="body1" color="textSecondary" gutterBottom>
                   <strong>Phone</strong>
                   <br />
-                  +1 123 456 1234
+                  <a href="tel:+11234561234" style={{ color: "#6F6F6FFF" }}>
+                    {data.Contact.phone}
+                  </a>
                 </Typography>
                 <Typography variant="body1" color="textSecondary" gutterBottom>
                   <strong>Email</strong>
                   <br />
-                  info@company.com
+                  <a
+                    href="mailto:correo@ejemplo.com"
+                    style={{ color: "#6F6F6FFF" }}
+                  >
+                    {data.Contact.email}
+                  </a>
                 </Typography>
               </Grid>
             </Grid>

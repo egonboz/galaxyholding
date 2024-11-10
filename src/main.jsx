@@ -9,7 +9,7 @@ import "@fontsource/roboto/700.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/galaxyholding/">
       <GalaxyHolding />
     </BrowserRouter>
   </StrictMode>

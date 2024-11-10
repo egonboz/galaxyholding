@@ -1,29 +1,27 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import XIcon from "@mui/icons-material/X";
 import { FacebookOutlined } from "@mui/icons-material";
 
-export const Footer = () => {
+export const Footer = ({ data }) => {
   return (
     <Box
       component="footer"
       sx={{
         display: "flex",
-        flexDirection: "column", // Coloca los elementos en una columna
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         padding: 2,
-        background:
-          "linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(33, 150, 243, 0.7))", // Gradiente espacial
-        backdropFilter: "blur(10px)", // Efecto de desenfoque para la sensación de espacio
-        position: "absolute",
+        background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
+        backdropFilter: "blur(10px)",
         width: "100%",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <IconButton
           component="a"
-          href="https://www.linkedin.com"
+          href={data.Footer.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           sx={{ mx: 1 }}
@@ -32,16 +30,16 @@ export const Footer = () => {
         </IconButton>
         <IconButton
           component="a"
-          href="https://www.twitter.com"
+          href={data.Footer.x}
           target="_blank"
           rel="noopener noreferrer"
           sx={{ mx: 1 }}
         >
-          <TwitterIcon sx={{ color: "white" }} />
+          <XIcon sx={{ color: "white" }} />
         </IconButton>
         <IconButton
           component="a"
-          href="https://www.instagram.com"
+          href={data.Footer.facebook}
           target="_blank"
           rel="noopener noreferrer"
           sx={{ mx: 1 }}
@@ -50,7 +48,7 @@ export const Footer = () => {
         </IconButton>
       </Box>
       <Typography sx={{ color: "white", mt: 1 }}>
-        © 2024 Enterprise. Design by EG
+        © 2024 {data.Footer.enterprise}. Design by EG
       </Typography>
     </Box>
   );
