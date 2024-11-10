@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galaxy Holding
     </title>
+    <script>
+      // Redirect to index.html for GitHub Pages' 404 handling
+      (function() {
+        const redirectToIndex = () => {
+          if (location.pathname.includes('/galaxyholding/') && location.pathname !== '/galaxyholding/index.html') {
+            location.replace('/galaxyholding/index.html');
+          }
+        };
+        redirectToIndex();
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
