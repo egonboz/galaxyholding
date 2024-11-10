@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 export const AboutUs = ({ data }) => {
-  console.log(data);
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">

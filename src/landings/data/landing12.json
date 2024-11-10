@@ -3,11 +3,11 @@
         "imageUrl": "https://via.placeholder.com/500x300"
     },
     "Color": {
-        "backgroundColor": "rgba(33, 243, 54, 0.7)"
+        "backgroundColor": "rgba(46, 204, 113, 0.7)"
     },
     "Welcome": {
     "backgroundImageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-    "enterpriseName": "Enterprise 2",
+    "enterpriseName": "Enterprise 12",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
     "buttonText": "LEARN MORE"
     },
