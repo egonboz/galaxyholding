@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { Landing } from "../Landing";
-import MarketingPage from "../test/MarketingPage";
 
 export const LandingsRoutes = () => {
   return (
