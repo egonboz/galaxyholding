@@ -37,7 +37,7 @@ export const Contact = ({ data }) => {
           gutterBottom
           sx={{ fontWeight: "bold" }}
         >
-          CONTACT US
+          CONTACT
         </Typography>
         <Box
           sx={{

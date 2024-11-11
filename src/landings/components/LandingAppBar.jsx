@@ -28,6 +28,18 @@ export const LandingAppBar = ({ data }) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleScroll = (id) => (event) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -50; // Ajusta esto según el desplazamiento que necesites
+      const yPosition =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: "smooth" });
+    }
+    handleCloseNavMenu();
+  };
   return (
     <AppBar
       position="fixed"
@@ -73,10 +85,8 @@ export const LandingAppBar = ({ data }) => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.id} onClick={handleScroll(page.id)}>
                   <Typography
-                    component="a"
-                    href={`#${page.id}`}
                     sx={{
                       textAlign: "center",
                       textDecoration: "none",
@@ -100,7 +110,7 @@ export const LandingAppBar = ({ data }) => {
             {pages.map((page) => (
               <Button
                 key={page.id}
-                href={`#${page.id}`}
+                onClick={handleScroll(page.id)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page.name}
