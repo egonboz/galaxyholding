@@ -33,13 +33,14 @@ export const LandingAppBar = ({ data }) => {
     event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -50; // Ajusta esto según el desplazamiento que necesites
+      const yOffset = -80;
       const yPosition =
         element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: yPosition, behavior: "smooth" });
     }
     handleCloseNavMenu();
   };
+
   return (
     <AppBar
       position="fixed"
@@ -47,9 +48,11 @@ export const LandingAppBar = ({ data }) => {
         background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), ${data.Color.backgroundColor})`,
         backdropFilter: "blur(10px)",
         borderRadius: 10,
-        margin: 2,
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
-        maxWidth: "95%",
+        marginTop: "8px",
+        width: "80%",
+        left: "50%",
+        transform: "translateX(-50%)",
         zIndex: 10,
       }}
     >
